@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="calculator mx-auto bg-gray-200 rounded-lg shadow-md p-4">
+    <div class="display text-right text-gray-700 font-bold text-2xl pb-2 py-10 px-4" id="currentCalculation">
+      0
+    </div>
+    <div class="history-container text-left text-gray-700 font-bold text-2xl pb-2 px-4 mb-4">
+      <!-- Calculation history will be displayed here -->
+    </div>
+    <div class="buttons grid grid-cols-4 gap-2 py-4">
+      <button class="bg-red-600 hover:bg-red-400 rounded-lg px-4 py-2" onclick="clearCalculation()">AC</button>
+      <button class="bg-yellow-600 hover:bg-yellow-400 rounded-lg px-4 py-2" onclick="clearCalculation()">C</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendOperator('/')">/</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendOperator('*')">*</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendNumber('7')">7</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendNumber('8')">8</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendNumber('9')">9</button>
+      <button class="bg-gray-800 hover:bg-gray-400 rounded-lg px-4 py-2 text-white" onclick="eraseLastDigit()">Delete</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendNumber('4')">4</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendNumber('5')">5</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendNumber('6')">6</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendOperator('-')">-</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendNumber('1')">1</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendNumber('2')">2</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendNumber('3')">3</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendOperator('+')">+</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendNumber('0')">0</button>
+      <button class="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 py-2" onclick="appendDecimal()">.</button>
+      <button class="bg-blue-300 hover:bg-blue-400 rounded-lg px-4 py-2" onclick="calculate()">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
